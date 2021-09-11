@@ -1,6 +1,6 @@
 # COMANDOS DEL CLI
 
- # 1.- Generar un componente
+# 1.- Generar un componente
 
 1.- Sisn archivo de prueba
 ng g c pages/about --skipTests=true
@@ -21,7 +21,7 @@ ng g s services/user --flat --skip-tests
 
 // Los servicios son globales se puede injectar en cualquier lugar
 @Injectable({
-  providedIn: 'root'
+providedIn: 'root'
 })
 
 # Generar un GUARD guardian
@@ -36,23 +36,31 @@ ng g guard guard/auth -d --skip-tests
 ng g guard guard/auth --skip-tests
 
 Es todo los comando para utilizar con el GENERATE g
-    app-shell
-    application
-    class
-    component
-    directive
-    enum
-    guard
-    interceptor
-    interface
-    library
-    module
-    pipe
-    resolver
-    service
-    service-worker
-    web-worker
+app-shell
+application
+class
+component
+directive
+enum
+guard
+interceptor
+interface
+library
+module
+pipe
+resolver
+service
+service-worker
+web-worker
 
- # Comando para crear ROUTING
- ng g m appRouting --flat
- 
+# Comando para crear ROUTING
+
+ng g m appRouting --flat
+
+# Manejo de MODULOS
+
+ng g m pages/pages --flat --skip-tests
+
+Existen 2 maneras de hacer ruting
+1.- Por rutas hijas en l app-routing.module.ts
+2.- Por rutas por modulos los routing van a ser importados en el app.routing.module.ts
