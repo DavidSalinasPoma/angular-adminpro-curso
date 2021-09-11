@@ -1,27 +1,58 @@
-# Adminprohospital
+# COMANDOS DEL CLI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.5.
+ # 1.- Generar un componente
 
-## Development server
+1.- Sisn archivo de prueba
+ng g c pages/about --skipTests=true
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+2.- Generar con un nombre en especifico
+ng g c pages/about/about --flat --skip-tests
 
-## Code scaffolding
+# 2.- Generar un servicio
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1.- Ver ayuda para generar un servicio
+ng g s --help
 
-## Build
+2.- Simular la cracion de un servicio o componente
+ng generate s services/user --dry-run
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3.- Crear un servicio sin el archivo de prueba
+ng g s services/user --flat --skip-tests
 
-## Running unit tests
+// Los servicios son globales se puede injectar en cualquier lugar
+@Injectable({
+  providedIn: 'root'
+})
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Generar un GUARD guardian
 
-## Running end-to-end tests
+1.- Ver ayuda de generate g
+ng generate --help
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2.- Probar que se va a crear con el GUARD
+ng g guard guard/auth -d --skip-tests
 
-## Further help
+3.-Crear GUARD sin el archivo de prueba
+ng g guard guard/auth --skip-tests
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Es todo los comando para utilizar con el GENERATE g
+    app-shell
+    application
+    class
+    component
+    directive
+    enum
+    guard
+    interceptor
+    interface
+    library
+    module
+    pipe
+    resolver
+    service
+    service-worker
+    web-worker
+
+ # Comando para crear ROUTING
+ ng g m appRouting --flat
+ 
